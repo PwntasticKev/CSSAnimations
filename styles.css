@@ -1,0 +1,138 @@
+.crypto {
+  fill: white;
+  stroke: black;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 20s linear forwards;
+  animation: dash 20s linear forwards;
+}
+
+.svg:hover .crypto {
+  fill: #000; #000; #000;
+  transition: 1s;
+  transform: rotateZ(.2deg);
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.creek {
+  fill: white;
+  stroke: black;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 30s linear forwards;
+  animation: dash 30s linear forwards;
+}
+
+.transition {
+  background-color: pink;
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  border-radius: 80px;
+  text-align: center;
+  padding: 1rem;
+  transition: background 1s, transform 0.6s;
+}
+
+.transition:hover {
+  background: salmon;
+  transform: rotate(360deg);
+}
+
+.transition-2 {
+  background-color: red;
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  border-radius: 80px;
+  text-align: center;
+  padding: 1rem;
+  transition: background 1s, transform .8s 1s ease-in;
+}
+
+.transition-2:hover {
+  background: lightblue;
+  transform: rotateX(360deg);
+}
+.transition-3 {
+  background-color: red;
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  border-radius: 80px;
+  text-align: center;
+  padding: 1rem;
+  transition: background 1.5s, transform .4s 1s linear;
+}
+
+.transition-3:hover {
+  background: lightblue;
+  transform: rotateY(360deg);
+}
+
+.keyframe-kril {
+margin-top: 3rem;
+}
+
+.keyframe-kril img {
+  height: 10rem;
+  position: absolute;
+  left: 0;
+  top: 230px;
+  animation: walk 3s both infinite linear,
+             jump .5s .3s infinite ease;
+}
+
+.keyframe-rex img {
+  height: 10rem;
+  animation-name: walk;
+  animation-duration: 7s;
+  animation-fill-mode: both;
+  animation-iteration-count:  infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+
+
+.square{
+background-color: white;
+stroke: red;
+stroke-dasharray: 600;
+stroke-dashoffset: 0;
+animation: draw-square 15s infinite linear;
+animation-direction: normal;
+}
+
+@keyframes draw-square{
+  from{
+    stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/*@keyframes */
+
+@keyframes walk {
+  from{transform: translateX(-150px)}
+    to {transform: translateX(700px)
+    }
+}
+
+@keyframes jump {
+  0%{ top: 230px }
+  50%{ top: 180px;}
+  100%{ top: 230px}
+}
